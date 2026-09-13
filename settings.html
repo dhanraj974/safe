@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Settings - SafeSarthi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="header-logo">🛡️ SafeSarthi</a>
+        <div class="header-menu">☰</div>
+    </header>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="contacts.html">Emergency Contacts</a>
+        <a href="history.html">Alert History</a>
+        <a href="settings.html" class="active">Settings</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Emergency Settings</h2>
+        <p>Customize your emergency alert preferences.</p>
+
+        <!-- Settings -->
+        <section class="form-section">
+            <!-- Voice Help Toggle -->
+            <div class="settings-item">
+                <label for="voiceHelp">Voice Help</label>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="voiceHelp" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            <!-- Location Permission Toggle -->
+            <div class="settings-item">
+                <label for="locationPermission">Remember Location Permission</label>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="locationPermission" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            <!-- SOS Countdown -->
+            <div class="settings-item">
+                <label for="sosCountdown">SOS Countdown</label>
+                <input type="number" id="sosCountdown" min="1" max="10" value="5" style="width: 80px; padding: 8px; border: 2px solid var(--border); border-radius: 6px;">
+            </div>
+
+            <!-- Emergency Message -->
+            <div class="form-group" style="margin-top: 20px;">
+                <label for="emergencyMessage">Emergency Message</label>
+                <textarea id="emergencyMessage" rows="3" required>I need help. Please contact me immediately.</textarea>
+            </div>
+
+            <button type="button" id="saveSettingsButton" class="btn-save" style="margin-top: 20px;">Save Settings</button>
+
+            <div id="settingsSaved">
+                ✓ Settings saved successfully!
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html">
+            <span>🏠</span>
+            Home
+        </a>
+        <a href="contacts.html">
+            <span>👥</span>
+            Contacts
+        </a>
+        <a href="history.html">
+            <span>📜</span>
+            History
+        </a>
+        <a href="settings.html" class="active">
+            <span>⚙️</span>
+            Settings
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SafeSarthi - Emergency Safety Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="header-logo">🛡️ SafeSarthi</a>
+        <div class="header-menu">☰</div>
+    </header>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="contacts.html">Emergency Contacts</a>
+        <a href="history.html">Alert History</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Status Indicators -->
+        <div class="status-bar">
+            <div class="status-item online" id="connectionStatus">
+                🟢 Online
+            </div>
+            <div class="status-item location" id="locationStatus">
+                📍 Location Available
+            </div>
+        </div>
+
+        <!-- Emergency Section -->
+        <section class="emergency-section">
+            <h1 class="welcome-text">Stay Safe</h1>
+            <p class="welcome-subtext">We're here to help</p>
+            
+            <!-- Large SOS Button -->
+            <button id="sosButton" class="sos-button">
+                <span class="icon">�</span>
+                <span>SOS</span>
+            </button>
+
+            <p class="sos-help-text">Press for Emergency Help</p>
+
+            <!-- Voice Section -->
+            <div class="voice-section">
+                <div class="voice-header">
+                    🎤 Say "HELP"
+                </div>
+                <button id="voiceButton" class="voice-button">
+                    Start Voice Detection
+                </button>
+                <p id="voiceStatus" class="voice-status"></p>
+            </div>
+        </section>
+
+        <!-- SOS Countdown Modal -->
+        <div id="sosModal" class="modal">
+            <div class="modal-content">
+                <h2>⚠️ Emergency Alert</h2>
+                <p>Emergency alert will be triggered in <span id="countdown">5</span> seconds.</p>
+                <div class="modal-buttons">
+                    <button id="sendNowButton" class="btn-send">SEND NOW</button>
+                    <button id="cancelButton" class="btn-cancel">CANCEL</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alert Result Modal -->
+        <div id="alertModal" class="modal">
+            <div class="modal-content alert-modal">
+                <div class="compact-alert-header">
+                    <span class="compact-alert-icon">🚨</span>
+                    <span class="compact-alert-title">ALERT</span>
+                </div>
+                
+                <p class="compact-alert-subtitle">Emergency alert is ready</p>
+                
+                <div class="compact-status-row">
+                    <span class="compact-status-item"><span class="check-green">✓</span> Location</span>
+                    <span class="status-divider">•</span>
+                    <span class="compact-status-item"><span class="check-green">✓</span> Contacts</span>
+                    <span class="status-divider">•</span>
+                    <span class="compact-status-item"><span class="check-green">✓</span> Alert Ready</span>
+                </div>
+                
+                <div class="compact-info-section">
+                    <div class="compact-info-row">
+                        <span class="info-label">👤 Emergency Contact:</span>
+                        <span class="info-value" id="compactContactInfo">No contacts</span>
+                    </div>
+                    
+                    <div class="compact-info-row">
+                        <span class="info-label">💬 Message:</span>
+                        <span class="info-value" id="compactMessage">I need help. Please contact me immediately.</span>
+                    </div>
+                    
+                    <div class="compact-info-row">
+                        <span class="info-label">📍 Location</span>
+                        <span class="status-divider">|</span>
+                        <a id="alertMapLink" href="#" target="_blank" class="compact-map-link">
+                            View on Google Maps
+                        </a>
+                    </div>
+                </div>
+                
+                <div id="smsButtonsContainer"></div>
+                
+                <button id="closeAlertButton" class="btn-send-alert">🔴 SEND ALERT</button>
+                <button id="cancelAlertButton" class="btn-cancel-compact">Cancel</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="active">
+            <span>🏠</span>
+            Home
+        </a>
+        <a href="contacts.html">
+            <span>👥</span>
+            Contacts
+        </a>
+        <a href="history.html">
+            <span>📜</span>
+            History
+        </a>
+        <a href="settings.html">
+            <span>⚙️</span>
+            Settings
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

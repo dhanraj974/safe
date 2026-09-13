@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Emergency Contacts - SafeSarthi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="header-logo">🛡️ SafeSarthi</a>
+        <div class="header-menu">☰</div>
+    </header>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="contacts.html" class="active">Emergency Contacts</a>
+        <a href="history.html">Alert History</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Emergency Contacts</h2>
+        <p>Add your emergency contacts who will receive alerts.</p>
+
+        <!-- Add Contact Form -->
+        <section class="form-section">
+            <h3>Add New Contact</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="contactName">Contact Name</label>
+                    <input type="text" id="contactName" placeholder="Enter name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contactPhone">Phone Number</label>
+                    <input type="tel" id="contactPhone" placeholder="Enter phone number" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contactRelation">Relationship</label>
+                    <input type="text" id="contactRelation" placeholder="e.g., Mother, Father" required>
+                </div>
+                
+                <button type="submit" class="btn-add">Add Emergency Contact</button>
+            </form>
+        </section>
+
+        <!-- Saved Contacts List -->
+        <section class="contacts-list">
+            <h3>Saved Contacts</h3>
+            <div id="contactsContainer">
+                <p class="no-contacts">No emergency contacts added yet.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html">
+            <span>🏠</span>
+            Home
+        </a>
+        <a href="contacts.html" class="active">
+            <span>👥</span>
+            Contacts
+        </a>
+        <a href="history.html">
+            <span>📜</span>
+            History
+        </a>
+        <a href="settings.html">
+            <span>⚙️</span>
+            Settings
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
